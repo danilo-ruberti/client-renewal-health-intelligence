@@ -10,11 +10,12 @@ Built as an Applied AI / AI Product Analyst take-home assessment prototype.
 
 **Step 1 ✓** Generates realistic sample client communication data and ingests it into a unified, structured dataset.
 
-**Step 2 ✓ (current):** Rule-based classifier assigns theme, sentiment, severity, business impact, and renewal risk signal to each record. A scoring model then produces a 0–100 risk score and aggregated summary by theme and product area.
+**Step 2 ✓** Rule-based classifier assigns theme, sentiment, severity, business impact, and renewal risk signal to each record. A scoring model produces a 0–100 risk score and aggregated summary by theme and product area.
+
+**Step 3 ✓ (current):** Streamlit dashboard with executive summary metrics, risk overview charts, time-series trends, theme analysis, filterable evidence table, talking points, and recommended actions.
 
 Planned next steps (not yet implemented):
-- Step 3: Streamlit dashboard to visualize client health and renewal-risk signals
-- Step 4: LLM-based classification layer and automated renewal readiness brief generation
+- Step 4: LLM-based classification layer and automated renewal readiness brief generation (`src/brief_generator.py`)
 
 ---
 
@@ -113,6 +114,14 @@ python src/scoring.py
 Outputs:
 - `data/processed/client_health_scored.csv`
 - `outputs/client_health_summary.csv`
+
+### Step 5 — Launch the dashboard
+
+```bash
+streamlit run app.py
+```
+
+Opens at `http://localhost:8501`. Use the sidebar to filter by source, product area, theme, risk level, sentiment, or open/unresolved status.
 
 ---
 
