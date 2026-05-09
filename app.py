@@ -112,14 +112,12 @@ top_risk_theme = (
     if not filt.empty else "—"
 )
 
-c1, c2, c3, c4, c5, c6 = st.columns(6)
+c1, c2, c3 = st.columns(3)
 c1.metric("Communications Analyzed", len(filt))
 c2.metric("Avg Risk Score", f"{filt['risk_score'].mean():.1f}" if not filt.empty else "—")
-c3.metric(
-    "High-Risk Records",
-    int((filt["risk_level"] == "High").sum()),
-    delta=None,
-)
+c3.metric("High-Risk Records", int((filt["risk_level"] == "High").sum()))
+
+c4, c5, c6 = st.columns(3)
 c4.metric("Open / Unresolved", int(filt["is_open_or_unresolved"].sum()))
 c5.metric("Negative Sentiment", int((filt["sentiment"] == "Negative").sum()))
 c6.metric("Top Risk Theme", top_risk_theme)
