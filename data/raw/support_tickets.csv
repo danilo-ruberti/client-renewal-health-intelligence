@@ -1,0 +1,36 @@
+ticket_id,created_date,client_name,contact_name,contact_role,product_area,issue_description,ticket_status,priority,assigned_to,days_open
+TKT-1000,2026-01-31,Harborview Community Bank,Kevin Torres,Loan Operations Manager,Data Exports,User unable to run ACH batch report — system times out after 30 seconds. This is blocking month-end close.,In Progress,Critical,Jordan Kim,30
+TKT-1001,2025-05-10,Harborview Community Bank,Sandra Chen,Branch Manager,Integrations,User unable to run loan pipeline report — system times out after 30 seconds. This is blocking month-end close.,Resolved,High,Morgan Lee,44
+TKT-1002,2026-02-04,Harborview Community Bank,Patricia Owens,Compliance Officer,Dashboard,Compliance report for HMDA cannot be generated — field mapping broken.,Resolved,Medium,Morgan Lee,11
+TKT-1003,2025-12-31,Harborview Community Bank,Sandra Chen,Branch Manager,Payment Reconciliation,Audit trail missing for permission changes in admin console.,Resolved,Low,Morgan Lee,36
+TKT-1004,2025-11-10,Harborview Community Bank,James Hartley,CFO,Lending Workflow,Lending workflow stuck at approval stage for loan ID LN99593. Blocking disbursement.,Resolved,High,Morgan Lee,35
+TKT-1005,2023-05-02,Harborview Community Bank,Kevin Torres,Loan Operations Manager,User Management,Manual workaround needed: Lending Workflow export requires re-keying into spreadsheet every week.,In Progress,Low,Taylor Brooks,28
+TKT-1006,2024-04-11,Harborview Community Bank,Kevin Torres,Loan Operations Manager,Core Banking,Interest calculation rounding error in loan amortization schedule.,Resolved,Medium,Casey Patel,52
+TKT-1007,2023-11-27,Harborview Community Bank,Patricia Owens,Compliance Officer,Admin & Permissions,"Payment reconciliation discrepancy flagged by auditor — $3,587 off on March 2025 batch.",Resolved,Medium,Casey Patel,60
+TKT-1008,2023-03-29,Harborview Community Bank,Sandra Chen,Branch Manager,Payment Reconciliation,Two-factor authentication failing for remote branch staff.,In Progress,Medium,Taylor Brooks,65
+TKT-1009,2026-01-28,Harborview Community Bank,Debra Mills,Core Banking Admin,Dashboard,Scheduled report not emailing to distribution list since last update.,Escalated,Low,Alex Rivera,77
+TKT-1010,2025-05-21,Harborview Community Bank,Patricia Owens,Compliance Officer,Core Banking,User unable to run GL reconciliation report — system times out after 30 seconds. This is blocking month-end close.,Resolved,Low,Casey Patel,99
+TKT-1011,2023-05-11,Harborview Community Bank,Mark Delgado,IT Director,Dashboard,"Export limit of 10,000 rows too restrictive for full GL reconciliation.",Resolved,Medium,Taylor Brooks,57
+TKT-1012,2025-02-08,Harborview Community Bank,Sandra Chen,Branch Manager,Core Banking,Admin permission change for new user user446 not propagating to sub-modules.,In Progress,Critical,Alex Rivera,30
+TKT-1013,2023-12-10,Harborview Community Bank,Lisa Nguyen,VP of Operations,Reporting & Analytics,ACH file generation fails intermittently — no error shown to end user.,Resolved,Low,Casey Patel,61
+TKT-1014,2025-03-16,Harborview Community Bank,Mark Delgado,IT Director,Core Banking,Core banking sync with Data Exports delayed by up to 4 hours during peak load.,Resolved,Critical,Alex Rivera,8
+TKT-1015,2024-01-21,Harborview Community Bank,James Hartley,CFO,Lending Workflow,Admin permission change for new user user649 not propagating to sub-modules.,In Progress,Low,Alex Rivera,57
+TKT-1016,2026-04-30,Harborview Community Bank,Debra Mills,Core Banking Admin,User Management,Admin permission change for new user user195 not propagating to sub-modules.,In Progress,Low,Alex Rivera,22
+TKT-1017,2025-08-13,Harborview Community Bank,James Hartley,CFO,Reporting & Analytics,Interest calculation rounding error in loan amortization schedule.,In Progress,Low,Casey Patel,95
+TKT-1018,2023-10-04,Harborview Community Bank,Sandra Chen,Branch Manager,Reporting & Analytics,ACH file generation fails intermittently — no error shown to end user.,Open,High,Casey Patel,9
+TKT-1019,2026-03-30,Harborview Community Bank,Kevin Torres,Loan Operations Manager,Admin & Permissions,Interest calculation rounding error in loan amortization schedule.,Resolved,Medium,Taylor Brooks,120
+TKT-1020,2024-04-04,Harborview Community Bank,Patricia Owens,Compliance Officer,Admin & Permissions,ACH file generation fails intermittently — no error shown to end user.,Escalated,Low,Alex Rivera,59
+TKT-1021,2023-01-22,Harborview Community Bank,Sandra Chen,Branch Manager,Integrations,Admin permission change for new user user618 not propagating to sub-modules.,In Progress,High,Casey Patel,91
+TKT-1022,2023-09-10,Harborview Community Bank,Patricia Owens,Compliance Officer,Integrations,Scheduled report not emailing to distribution list since last update.,Resolved,High,Taylor Brooks,78
+TKT-1023,2025-01-17,Harborview Community Bank,Mark Delgado,IT Director,Lending Workflow,Compliance report for Reg E cannot be generated — field mapping broken.,Open,High,Jordan Kim,82
+TKT-1024,2025-05-06,Harborview Community Bank,Patricia Owens,Compliance Officer,Dashboard,Regulatory exam prep — need historical loan pipeline report for past 24 months.,Resolved,Medium,Jordan Kim,56
+TKT-1025,2024-04-19,Harborview Community Bank,Mark Delgado,IT Director,Reporting & Analytics,Feature request: add drill-down to Reporting & Analytics module to reduce manual steps.,Resolved,Medium,Casey Patel,96
+TKT-1026,2025-12-18,Harborview Community Bank,Mark Delgado,IT Director,Admin & Permissions,Lending workflow stuck at approval stage for loan ID LN53540. Blocking disbursement.,Open,Medium,Morgan Lee,112
+TKT-1027,2024-05-25,Harborview Community Bank,Lisa Nguyen,VP of Operations,Core Banking,Manual workaround needed: Core Banking export requires re-keying into spreadsheet every week.,In Progress,Low,Taylor Brooks,45
+TKT-1028,2024-11-30,Harborview Community Bank,Kevin Torres,Loan Operations Manager,User Management,Interest calculation rounding error in loan amortization schedule.,Open,Medium,Taylor Brooks,56
+TKT-1029,2025-09-02,Harborview Community Bank,Sandra Chen,Branch Manager,User Management,Admin permission change for new user user360 not propagating to sub-modules.,Resolved,Low,Jordan Kim,47
+TKT-1030,2023-07-09,Harborview Community Bank,James Hartley,CFO,Data Exports,ACH file generation fails intermittently — no error shown to end user.,In Progress,High,Jordan Kim,25
+TKT-1031,2025-08-15,Harborview Community Bank,James Hartley,CFO,Compliance Reporting,Lending workflow stuck at approval stage for loan ID LN10053. Blocking disbursement.,In Progress,Medium,Taylor Brooks,60
+TKT-1032,2024-11-17,Harborview Community Bank,James Hartley,CFO,Core Banking,Compliance report for Reg CC cannot be generated — field mapping broken.,Resolved,Medium,Taylor Brooks,29
+TKT-1033,2025-08-15,Harborview Community Bank,Debra Mills,Core Banking Admin,Admin & Permissions,"Payment reconciliation discrepancy flagged by auditor — $40,560 off on Q4 2024 batch.",Open,Medium,Morgan Lee,52
+TKT-1034,2024-07-16,Harborview Community Bank,Mark Delgado,IT Director,Dashboard,User unable to run GL reconciliation report — system times out after 30 seconds. This is blocking month-end close.,In Progress,Low,Morgan Lee,18

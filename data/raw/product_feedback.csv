@@ -1,0 +1,26 @@
+feedback_id,submitted_date,submitter_name,submitter_role,organization,module,feedback_text,sentiment,reviewed
+FB-4000,2025-09-22,Lisa Nguyen,VP of Operations,Harborview Community Bank,Core Banking,Payment Reconciliation integration with our core system still feels brittle — we get silent failures weekly.,Negative,No
+FB-4001,2023-09-27,Lisa Nguyen,VP of Operations,Harborview Community Bank,Admin & Permissions,"The reporting is good but we can't customize column order, which is frustrating during audits.",Neutral,Yes
+FB-4002,2025-03-26,Kevin Torres,Loan Operations Manager,Harborview Community Bank,Data Exports,Mobile access for Core Banking is essential for our branch managers — this is a recurring ask.,Positive,Yes
+FB-4003,2024-03-31,Lisa Nguyen,VP of Operations,Harborview Community Bank,Payment Reconciliation,"The reporting is good but we can't customize column order, which is frustrating during audits.",Negative,Yes
+FB-4004,2025-10-13,James Hartley,CFO,Harborview Community Bank,Core Banking,User Management integration with our core system still feels brittle — we get silent failures weekly.,Negative,Yes
+FB-4005,2023-10-23,James Hartley,CFO,Harborview Community Bank,Data Exports,Core Banking API documentation is outdated — our IT team wasted 3 days on a stale endpoint.,Negative,No
+FB-4006,2024-12-20,Lisa Nguyen,VP of Operations,Harborview Community Bank,Lending Workflow,The Core Banking dashboard is missing key metrics our compliance team needs for BSA.,Negative,Yes
+FB-4007,2023-12-04,Kevin Torres,Loan Operations Manager,Harborview Community Bank,Lending Workflow,Support response for Lending Workflow tickets has improved — keep it up.,Neutral,Yes
+FB-4008,2025-05-28,Debra Mills,Core Banking Admin,Harborview Community Bank,Core Banking,I wish Admin & Permissions had a drill-down option — it would eliminate our biggest manual step.,Positive,No
+FB-4009,2025-12-12,Mark Delgado,IT Director,Harborview Community Bank,Dashboard,Scheduled reports are unreliable — missed two weeks in a row without any notification.,Negative,Yes
+FB-4010,2025-03-02,Sandra Chen,Branch Manager,Harborview Community Bank,Admin & Permissions,Admin & Permissions API documentation is outdated — our IT team wasted 3 days on a stale endpoint.,Negative,Yes
+FB-4011,2023-08-05,Patricia Owens,Compliance Officer,Harborview Community Bank,Dashboard,Really appreciated the recent update to User Management — the new layout is much cleaner.,Positive,Yes
+FB-4012,2025-02-02,Mark Delgado,IT Director,Harborview Community Bank,Reporting & Analytics,Admin & Permissions integration with our core system still feels brittle — we get silent failures weekly.,Positive,No
+FB-4013,2023-07-07,Lisa Nguyen,VP of Operations,Harborview Community Bank,Dashboard,"The bulk export limit is a real problem. We need more than 10,000 rows for our GL runs.",Negative,No
+FB-4014,2024-01-15,James Hartley,CFO,Harborview Community Bank,Lending Workflow,Support response for Integrations tickets has improved — keep it up.,Negative,Yes
+FB-4015,2024-05-07,Kevin Torres,Loan Operations Manager,Harborview Community Bank,User Management,Permissions in Core Banking are confusing. New staff struggle with onboarding.,Negative,No
+FB-4016,2025-11-30,James Hartley,CFO,Harborview Community Bank,Data Exports,"The reporting is good but we can't customize column order, which is frustrating during audits.",Neutral,Yes
+FB-4017,2026-03-26,Lisa Nguyen,VP of Operations,Harborview Community Bank,Dashboard,Permissions in Integrations are confusing. New staff struggle with onboarding.,Negative,No
+FB-4018,2023-01-15,Sandra Chen,Branch Manager,Harborview Community Bank,User Management,Permissions in Core Banking are confusing. New staff struggle with onboarding.,Neutral,Yes
+FB-4019,2023-03-06,Debra Mills,Core Banking Admin,Harborview Community Bank,User Management,"The bulk export limit is a real problem. We need more than 10,000 rows for our GL runs.",Negative,No
+FB-4020,2024-06-04,Patricia Owens,Compliance Officer,Harborview Community Bank,Core Banking,Would love to see bulk export added — other platforms we've used had this out of the box.,Neutral,No
+FB-4021,2026-02-26,Patricia Owens,Compliance Officer,Harborview Community Bank,Dashboard,Mobile access for Core Banking is essential for our branch managers — this is a recurring ask.,Negative,Yes
+FB-4022,2024-10-09,James Hartley,CFO,Harborview Community Bank,Data Exports,"The bulk export limit is a real problem. We need more than 10,000 rows for our GL runs.",Positive,No
+FB-4023,2025-12-22,Kevin Torres,Loan Operations Manager,Harborview Community Bank,Data Exports,Would love to see scheduled snapshots added — other platforms we've used had this out of the box.,Negative,No
+FB-4024,2026-03-08,Patricia Owens,Compliance Officer,Harborview Community Bank,Data Exports,We submitted this User Management feedback six months ago and haven't seen it addressed.,Negative,Yes
