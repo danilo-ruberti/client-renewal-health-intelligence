@@ -22,7 +22,7 @@ Built as an Applied AI / AI Product Analyst take-home assessment prototype.
 
 ```
 .
-├── app.py                          # Streamlit dashboard (Step 2 — placeholder)
+├── app.py                          # Streamlit dashboard
 ├── requirements.txt
 ├── .env.example
 │
@@ -43,10 +43,10 @@ Built as an Applied AI / AI Product Analyst take-home assessment prototype.
 │   ├── utils.py                    # Shared helpers (text cleaning, date parsing)
 │   ├── classify.py                 # Rule-based health signal classifier
 │   ├── scoring.py                  # Risk scoring and aggregated summary
-│   └── brief_generator.py         # Brief generator (Step 4 — placeholder)
+│   └── brief_generator.py         # Brief generator
 │
 ├── outputs/
-│   ├── renewal_readiness_brief.md  # Generated brief (Step 4 — placeholder)
+│   ├── renewal_readiness_brief.md  # Generated brief
 │   └── client_health_summary.csv  # Aggregated theme × product area risk summary
 │
 └── docs/

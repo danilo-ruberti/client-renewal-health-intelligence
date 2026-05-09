@@ -27,7 +27,7 @@ PACKAGE_PATH = Path("outputs/briefing_package.json")
 OUTPUTS_DIR = Path("outputs")
 OUTPUTS_DIR.mkdir(parents=True, exist_ok=True)
 
-MODEL = "claude-sonnet-4-6"
+MODEL = "claude-sonnet-4-5-20250929"
 CLIENT_NAME = "Harborview Community Bank"
 RENEWAL_MONTHS = 4
 
@@ -233,78 +233,64 @@ def build_fallback_brief(package: dict) -> str:
     if not repeated_md:
         repeated_md = "_No repeated unresolved themes detected._"
 
-    return textwrap.dedent(f"""
-        # Renewal Readiness Brief: {package['client_name']}
+    risk_level = package["overall_risk_level"]
+    top_risks = "\n".join(
+        f"{i+1}. **{t['theme']}** — avg risk score {t['avg_risk_score']}"
+        for i, t in enumerate(package["top_themes_by_risk"][:4])
+    )
 
-        _Generated: {today} · Rule-based fallback (Claude API unavailable)_
-
-        ---
-
-        ## Executive Summary
-
-        Analysis of {package['total_communications']} client communications over the past 3 years
-        indicates an **{package['overall_risk_level']} renewal risk** for {package['client_name']},
-        with an average risk score of **{package['avg_risk_score']}/100**.
-        {package['high_risk_records']} of {package['total_communications']} records are classified
-        as high-risk, and {package['open_or_unresolved_records']} items remain open or unresolved
-        heading into renewal. The account team should prioritize addressing persistent issues
-        before the renewal conversation.
-
-        ---
-
-        ## Account Health Snapshot
-
-        | Metric | Value |
-        |---|---|
-        | Total communications analyzed | {package['total_communications']} |
-        | Average risk score | {package['avg_risk_score']} / 100 |
-        | Overall risk level | **{package['overall_risk_level']}** |
-        | High-risk records | {package['high_risk_records']} |
-        | Open / unresolved records | {package['open_or_unresolved_records']} |
-        | Negative sentiment records | {package['negative_sentiment_records']} |
-        | Repeated issue records | {package['repeated_issue_records']} |
-        | Top risk theme | {top_theme} |
-        | Top risk product area | {top_area} |
-
-        ---
-
-        ## Top Renewal Risks
-
-        """ + "\n".join(
-            f"{i+1}. **{t['theme']}** — avg risk score {t['avg_risk_score']}"
-            for i, t in enumerate(package["top_themes_by_risk"][:4])
-        ) + f"""
-
-        ---
-
-        ## High-Risk Evidence
-
-        {top_records_md}
-
-        ---
-
-        ## Suggested Talking Points
-
-        - Acknowledge outstanding items and provide a written resolution timeline before the renewal call.
-        - Address persistent issues in {top_theme} and {top_area} directly — the client has raised these multiple times.
-        - Prepare a clear post-mortem on any compliance or payment-related issues.
-        - Come with concrete evidence of platform improvements made since the last QBR.
-        - If any QBR commitments remain open, own the gap proactively rather than waiting for the client to raise it.
-
-        ---
-
-        ## Recommended Next Actions
-
-        {actions_md}
-
-        ---
-
-        ## Limitations
-
-        This brief is generated from synthetic sample data for prototype demonstration purposes.
-        Classification and scoring are rule-based. In production, this output must be validated
-        against live source-system data, actual CSM notes, and account team judgment before use.
-    """).strip()
+    sections = [
+        f"# Renewal Readiness Brief: {package['client_name']}",
+        f"_Generated: {today} · Rule-based fallback (Claude API unavailable)_",
+        "---",
+        "## Executive Summary",
+        (
+            f"Analysis of {package['total_communications']} client communications over the past "
+            f"3 years indicates a **{risk_level}** renewal risk for {package['client_name']}, "
+            f"with an average risk score of **{package['avg_risk_score']}/100**. "
+            f"{package['high_risk_records']} of {package['total_communications']} records are "
+            f"classified as high-risk, and {package['open_or_unresolved_records']} items remain "
+            f"open or unresolved heading into renewal. The account team should prioritize "
+            f"addressing persistent issues before the renewal conversation."
+        ),
+        "---",
+        "## Account Health Snapshot",
+        "| Metric | Value |",
+        "|---|---|",
+        f"| Total communications analyzed | {package['total_communications']} |",
+        f"| Average risk score | {package['avg_risk_score']} / 100 |",
+        f"| Overall risk level | **{risk_level}** |",
+        f"| High-risk records | {package['high_risk_records']} |",
+        f"| Open / unresolved records | {package['open_or_unresolved_records']} |",
+        f"| Negative sentiment records | {package['negative_sentiment_records']} |",
+        f"| Repeated issue records | {package['repeated_issue_records']} |",
+        f"| Top risk theme | {top_theme} |",
+        f"| Top risk product area | {top_area} |",
+        "---",
+        "## Top Renewal Risks",
+        top_risks,
+        "---",
+        "## High-Risk Evidence",
+        top_records_md,
+        "---",
+        "## Suggested Talking Points",
+        "- Acknowledge outstanding items and provide a written resolution timeline before the renewal call.",
+        f"- Address persistent issues in {top_theme} and {top_area} directly — the client has raised these multiple times.",
+        "- Prepare a clear post-mortem on any compliance or payment-related issues.",
+        "- Come with concrete evidence of platform improvements made since the last QBR.",
+        "- If any QBR commitments remain open, own the gap proactively rather than waiting for the client to raise it.",
+        "---",
+        "## Recommended Next Actions",
+        actions_md,
+        "---",
+        "## Limitations",
+        (
+            "This brief is generated from synthetic sample data for prototype demonstration purposes. "
+            "Classification and scoring are rule-based. In production, this output must be validated "
+            "against live source-system data, actual CSM notes, and account team judgment before use."
+        ),
+    ]
+    return "\n\n".join(sections)
 
 
 # ---------------------------------------------------------------------------
