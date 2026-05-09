@@ -8,13 +8,13 @@ Built as an Applied AI / AI Product Analyst take-home assessment prototype.
 
 ## What this prototype does
 
-**Step 1 (current):** Generates realistic sample client communication data and ingests it into a unified, structured dataset ready for analysis.
+**Step 1 ✓** Generates realistic sample client communication data and ingests it into a unified, structured dataset.
 
-The pipeline covers four raw communication channels for a fictional client — Harborview Community Bank — and normalizes them into a single `client_health_records.csv`.
+**Step 2 ✓ (current):** Rule-based classifier assigns theme, sentiment, severity, business impact, and renewal risk signal to each record. A scoring model then produces a 0–100 risk score and aggregated summary by theme and product area.
 
 Planned next steps (not yet implemented):
-- Step 2: Streamlit dashboard to visualize client health and renewal-risk signals
-- Step 3: LLM-based classification and automated renewal readiness brief generation
+- Step 3: Streamlit dashboard to visualize client health and renewal-risk signals
+- Step 4: LLM-based classification layer and automated renewal readiness brief generation
 
 ---
 
@@ -33,19 +33,21 @@ Planned next steps (not yet implemented):
 │   │   ├── qbr_notes.csv
 │   │   └── product_feedback.csv
 │   └── processed/
-│       └── client_health_records.csv   # Unified output of ingestion pipeline
+│       ├── client_health_records.csv     # Unified ingestion output (Step 1)
+│       ├── client_health_classified.csv  # + theme/sentiment/severity/risk signal (Step 2)
+│       └── client_health_scored.csv      # + risk_score / risk_level (Step 2)
 │
 ├── src/
 │   ├── generate_sample_data.py     # Generates raw sample CSVs
 │   ├── ingest.py                   # Normalizes raw CSVs into unified schema
 │   ├── utils.py                    # Shared helpers (text cleaning, date parsing)
-│   ├── classify.py                 # LLM classification (Step 3 — placeholder)
-│   ├── scoring.py                  # Health scoring (Step 3 — placeholder)
-│   └── brief_generator.py         # Brief generator (Step 3 — placeholder)
+│   ├── classify.py                 # Rule-based health signal classifier
+│   ├── scoring.py                  # Risk scoring and aggregated summary
+│   └── brief_generator.py         # Brief generator (Step 4 — placeholder)
 │
 ├── outputs/
-│   ├── renewal_readiness_brief.md  # Generated brief (Step 3)
-│   └── client_health_summary.csv  # Summary export (Step 3)
+│   ├── renewal_readiness_brief.md  # Generated brief (Step 4 — placeholder)
+│   └── client_health_summary.csv  # Aggregated theme × product area risk summary
 │
 └── docs/
     └── process_note.md             # Design decisions and pipeline notes
@@ -90,9 +92,33 @@ Reads the raw CSVs, normalizes them into one unified schema, and writes:
 python src/ingest.py
 ```
 
+### Step 3 — Classify records
+
+Applies rule-based theme, sentiment, severity, and renewal risk signal classification:
+
+```bash
+python src/classify.py
+```
+
+Output: `data/processed/client_health_classified.csv`
+
+### Step 4 — Score records
+
+Computes a 0–100 risk score per record and generates an aggregated summary:
+
+```bash
+python src/scoring.py
+```
+
+Outputs:
+- `data/processed/client_health_scored.csv`
+- `outputs/client_health_summary.csv`
+
 ---
 
 ## Unified schema
+
+### Ingested (`client_health_records.csv`)
 
 | Column | Description |
 |---|---|
@@ -107,6 +133,27 @@ python src/ingest.py
 | `priority` | Priority or urgency level |
 | `owner` | Nymbus account team member responsible |
 | `original_channel` | Source channel label (e.g. `Support Portal`, `Email`) |
+
+### Classified (`client_health_classified.csv`) — adds
+
+| Column | Values | Description |
+|---|---|---|
+| `theme` | 12 categories | Rule-based topic classification |
+| `sentiment` | Positive / Neutral / Negative | Keyword-based sentiment |
+| `severity` | Low / Medium / High | Derived from priority, sentiment, status |
+| `business_impact` | Low / Medium / High | Derived from theme and severity |
+| `is_repeated_issue` | True / False | Theme × product area seen ≥ 3× for this client |
+| `is_open_or_unresolved` | True / False | Status implies unresolved work |
+| `renewal_risk_signal` | Low / Medium / High | Composite signal for renewal exposure |
+| `recommended_action` | Short string | Account-team action prompt |
+| `summary` | Short string | Truncated raw_text (LLM layer replaces later) |
+
+### Scored (`client_health_scored.csv`) — adds
+
+| Column | Values | Description |
+|---|---|---|
+| `risk_score` | 0–100 | Weighted additive score across all signals |
+| `risk_level` | Low / Medium / High | Low: 0–39 · Medium: 40–69 · High: 70–100 |
 
 ---
 

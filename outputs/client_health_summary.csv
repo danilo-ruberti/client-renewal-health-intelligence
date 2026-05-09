@@ -1,0 +1,46 @@
+theme,product_area,record_count,avg_risk_score,high_risk_count,unresolved_count,repeated_issue_count,negative_sentiment_count
+Manual Workaround,Integrations,1,95.0,1,1,0,1
+Data Access,Core Banking,1,90.0,1,1,0,1
+Admin Permissions,Core Banking,3,88.3,3,2,3,1
+Data Export,Data Exports,3,86.0,2,3,3,3
+Payment Reconciliation,Data Exports,3,85.0,2,2,3,2
+Data Export,Dashboard,1,85.0,1,1,0,1
+Follow-up / Ownership,Core Banking,3,84.3,3,1,3,2
+Compliance Reporting,Lending Workflow,4,82.5,3,2,4,2
+Payment Reconciliation,User Management,2,80.0,2,2,0,2
+Compliance Reporting,User Management,1,80.0,1,1,0,1
+Dashboard Limitations,Dashboard,3,79.3,3,1,3,2
+Payment Reconciliation,Reporting & Analytics,5,79.0,5,3,5,4
+Payment Reconciliation,Admin & Permissions,5,78.0,4,3,5,3
+Payment Reconciliation,Core Banking,5,76.0,5,3,5,3
+Lending Workflow,Integrations,1,75.0,1,0,0,1
+Payment Reconciliation,Lending Workflow,1,75.0,1,0,0,1
+Compliance Reporting,Compliance Reporting,6,73.3,4,2,6,4
+Compliance Reporting,Admin & Permissions,5,72.0,4,1,5,4
+Admin Permissions,User Management,8,71.5,4,5,8,5
+Compliance Reporting,Reporting & Analytics,4,71.2,2,1,4,1
+Compliance Reporting,Integrations,1,70.0,1,0,0,1
+Compliance Reporting,Payment Reconciliation,2,67.5,1,0,0,2
+Payment Reconciliation,Dashboard,2,65.0,1,1,0,2
+Compliance Reporting,Core Banking,2,65.0,1,0,0,2
+Payment Reconciliation,Payment Reconciliation,6,64.2,3,2,6,2
+Lending Workflow,Lending Workflow,5,59.0,1,1,5,1
+Admin Permissions,Admin & Permissions,3,58.7,1,1,3,1
+Compliance Reporting,Data Exports,2,57.5,0,1,0,1
+Admin Permissions,Dashboard,4,53.5,1,1,4,1
+Follow-up / Ownership,Admin & Permissions,2,53.0,0,0,0,2
+Reporting,Core Banking,1,53.0,0,1,0,1
+Admin Permissions,Reporting & Analytics,2,53.0,0,2,0,2
+Admin Permissions,Data Exports,3,51.3,1,0,3,1
+Compliance Reporting,Dashboard,2,50.0,0,0,0,1
+Admin Permissions,Integrations,1,48.0,0,1,0,0
+General Support,Core Banking,1,45.0,0,0,0,1
+Reporting,Reporting & Analytics,1,43.0,0,1,0,0
+Lending Workflow,User Management,2,40.0,0,1,0,0
+Manual Workaround,Dashboard,2,33.0,0,1,0,0
+Reporting,Integrations,1,28.0,0,0,0,0
+Feature Request,Data Exports,1,25.0,0,1,0,0
+Manual Workaround,Reporting & Analytics,1,23.0,0,0,0,0
+Manual Workaround,Data Exports,1,23.0,0,0,0,0
+Manual Workaround,Core Banking,2,23.0,0,2,0,0
+Feature Request,Core Banking,1,10.0,0,1,0,0
