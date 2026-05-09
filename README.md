@@ -12,10 +12,9 @@ Built as an Applied AI / AI Product Analyst take-home assessment prototype.
 
 **Step 2 ✓** Rule-based classifier assigns theme, sentiment, severity, business impact, and renewal risk signal to each record. A scoring model produces a 0–100 risk score and aggregated summary by theme and product area.
 
-**Step 3 ✓ (current):** Streamlit dashboard with executive summary metrics, risk overview charts, time-series trends, theme analysis, filterable evidence table, talking points, and recommended actions.
+**Step 3 ✓** Streamlit dashboard with executive summary metrics, risk overview charts, time-series trends, theme analysis, filterable evidence table, talking points, and recommended actions.
 
-Planned next steps (not yet implemented):
-- Step 4: LLM-based classification layer and automated renewal readiness brief generation (`src/brief_generator.py`)
+**Step 4 ✓ (current):** Claude API generates a senior-ready renewal readiness brief from the scored data. Falls back to rule-based markdown if the API key is unavailable.
 
 ---
 
@@ -115,7 +114,20 @@ Outputs:
 - `data/processed/client_health_scored.csv`
 - `outputs/client_health_summary.csv`
 
-### Step 5 — Launch the dashboard
+### Step 5 — Generate the renewal readiness brief
+
+Calls the Claude API to write a senior-ready brief from the scored data.
+Requires `ANTHROPIC_API_KEY` in `.env`. Falls back to rule-based markdown if unavailable.
+
+```bash
+python src/brief_generator.py
+```
+
+Outputs:
+- `outputs/renewal_readiness_brief.md` — the brief
+- `outputs/briefing_package.json` — the compact input sent to Claude
+
+### Step 6 — Launch the dashboard
 
 ```bash
 streamlit run app.py
