@@ -89,7 +89,7 @@ if sel_open_only:
 # Header
 # ---------------------------------------------------------------------------
 
-st.title("🏦 Client Renewal Health Dashboard")
+st.title("Client Renewal Health Dashboard")
 st.caption(
     "Prototype for analyzing renewal risk from support tickets, account emails, "
     "QBR notes, and product feedback."
